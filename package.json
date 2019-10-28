@@ -1,0 +1,24 @@
+{
+  "name": "mealgen",
+  "version": "1.0.0",
+  "description": "This project gives you a random meal.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/corinasebesan/randommeal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/corinasebesan/randommeal/issues"
+  },
+  "homepage": "https://github.com/corinasebesan/randommeal#readme",
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}
