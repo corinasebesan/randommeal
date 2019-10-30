@@ -8,6 +8,7 @@ class Meal {
       : [];
     this.instructions = data.strInstructions;
     this.data = data;
+    this.video = data.strYoutube.replace("watch?v=", "embed/");
   }
 
   ingredients() {
@@ -56,12 +57,14 @@ function showMeal(meal) {
   const instructions = document.getElementById("instructions");
   const tags = document.getElementById("tags");
   const ingredients = document.getElementById("ingredients");
+  const vid = document.getElementById("vid");
 
   pic.src = meal.picture;
+  vid.src = meal.video;
   title.innerHTML = meal.title;
-  category.innerHTML = `Category: ${meal.category}`;
+  category.innerHTML = `<b>Category:</b> ${meal.category}`;
   instructions.innerHTML = meal.instructions;
-  tags.innerHTML = `Tags: ${meal.tags.map(e => e + "❤️").join(", ")}`;
+  tags.innerHTML = `<b>Tags:</b> ${meal.tags.map(e => e).join(", ")}`;
   ingredients.innerHTML = meal
     .ingredients()
     .map(ingredient => {
@@ -70,62 +73,26 @@ function showMeal(meal) {
     .join("");
 }
 
-// function fetching(url) {
-//   const pic = document.getElementById("ima");
-//   const title = document.getElementById("title");
-//   const category = document.getElementById("category");
-//   const instructions = document.getElementById("instructions");
-//   const tags = document.getElementById("tags");
-//   const vid = document.getElementById("vid");
-//   const ul = document.getElementById("ingredients");
+function openWindow(meal) {
+  newWindow = window.open(
+    "",
+    null,
+    "height=600,width=900,status=yes,toolbar=no,menubar=no,location=no"
+  );
+  newWindow.document.innerHTML = `<iframe id="vi" src="${meal.video}"> </iframe>`;
+}
 
-//   fetch(url)
-//     .then(resp => resp.json())
-//     .then(data => {
-//       const receipts = data.meals;
-//       return receipts.map(receipt => {
-//         let nameIn = "";
-//         let nameMe = "";
-
-//         pic.src = receipt.strMealThumb;
-//         title.textContent = receipt.strMeal;
-//         category.textContent = `Category: ${receipt.strCategory}`;
-//         instructions.textContent = receipt.strInstructions;
-//         tags.textContent = `Tags: ${receipt.strTags}`;
-//         vid.src = receipt.strYoutube.replace("watch?v=", "embed/");
-
-//         while (ul.firstChild) {
-//           ul.removeChild(ul.firstChild);
-//         }
-
-//         for (let i = 1; i <= 20; i += 1) {
-//           nameIn = `strIngredient${i}`;
-//           nameMe = `strMeasure${i}`;
-//           if (receipt[nameIn] !== null && receipt[nameIn] !== "") {
-//             const li = createNode("li");
-//             li.setAttribute("id", `- ${receipt[nameIn]} - ${receipt[nameMe]}`);
-//             append(
-//               li,
-//               document.createTextNode(
-//                 `- ${receipt[nameIn]} - ${receipt[nameMe]}`
-//               )
-//             );
-//             append(ul, li);
-//           }
-//         }
-
-//         return 0;
-//       });
-//     })
-//     .catch(error => {
-//       console.log(error);
-//     });
-// }
+function setValue(value) {
+  document.getElementById("value").value = value;
+}
 
 function main() {
   getMeal().then(meal => showMeal(meal));
 
   document.getElementById("btn1").onclick = () => {
     getMeal().then(meal => showMeal(meal));
+  };
+  document.getElementById("btn2").onclick = () => {
+    getMeal().then(meal => openWindow(meal));
   };
 }

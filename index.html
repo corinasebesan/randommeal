@@ -9,20 +9,29 @@
       href="https://fonts.googleapis.com/css?family=Oswald|PT+Sans&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" href="index.css" />
     <script src="index.js"></script>
   </head>
   <body onload="main()">
-    <section id="titlul">
+    <section class="titlul">
       <h1>Feeling Hungry?</h1>
       <h3>Get a random meal by clicking the button</h3>
-      <button id="btn1">GET MEAL 🍔</button>
+      <button class="btn" id="btn1">
+        GET MEAL <i class="material-icons" id="fastfood">fastfood</i>
+      </button>
     </section>
-    <section id="info">
-      <div class="box" id="pic">
+    <section class="info">
+      <div class="pic">
         <img id="ima" src="" alt="food" />
+        <button class="btn" id="btn2">
+          <i class="material-icons">play_arrow</i>
+        </button>
       </div>
-      <div class="box" id="txt">
+      <div id="txt">
         <h2 id="title"></h2>
         <p id="category"></p>
         <p id="tags"></p>
@@ -31,7 +40,7 @@
         <ul id="ingredients"></ul>
       </div>
     </section>
-    <section id="film">
+    <section class="film">
       <iframe id="vid" src=""> </iframe>
     </section>
   </body>

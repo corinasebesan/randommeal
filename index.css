@@ -1,30 +1,105 @@
 h1,
 h2,
 h4 {
-  color: black;
+  color: rgb(54, 54, 54);
   font-family: "Oswald", sans-serif;
-}
-h1 {
-  font-size: 30px;
 }
 h3,
 p,
 ul {
-  color: black;
   font-family: "PT Sans", sans-serif;
 }
 p,
-ul,
-li {
+ul {
   color: gray;
+  font-size: 20px;
+}
+h3 {
+  color: rgb(83, 83, 83);
+}
+h1 {
+  font-size: 50px;
+}
+h2,
+h3 {
+  font-size: 30px;
+}
+h4 {
+  font-size: 25px;
+}
+h3,
+#ingredients,
+#category,
+#tags {
+  margin-top: 0;
+}
+h2,
+#category,
+h4,
+h1 {
+  margin-bottom: 0;
+  margin-top: 0;
 }
 body {
   overflow: scroll;
 }
-ul {
-  list-style-type: none;
+.titlul {
+  text-align: center;
 }
-#info {
+.btn {
+  background-color: #03befc;
+  border: none;
+  color: white;
+  padding: 12px 32px;
+  size: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 7px;
+  cursor: pointer;
+  display: inline-flex;
+  align-content: center;
+}
+.btn:hover {
+  background-color: white;
+  color: #03befc;
+  border: #03befc 1px solid;
+  padding: 11px 31px;
+  size: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 7px;
+  cursor: pointer;
+  display: inline-flex;
+  align-content: center;
+}
+#fastfood {
+  margin-left: 6px;
+  font-size: 17px;
+}
+.pic {
+  float: left;
+}
+#ima {
+  width: 300px;
+  height: 300px;
+  border-radius: 7px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  position: absolute;
+  margin: 10px;
+}
+#btn2 {
+  position: relative;
+  margin-left: 10px;
+  margin-top: 320px;
+  margin-left: 140px;
+}
+.info {
   border: rgb(226, 226, 226) 1px solid;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   overflow: auto;
@@ -34,45 +109,21 @@ ul {
   left: 0;
   right: 0;
 }
-#titlul,
-#film {
-  text-align: center;
-}
-#btn1 {
-  background-color: #03befc;
-  border: none;
-  color: white;
-  padding: 12px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 10px;
-  font-weight: bold;
-  border-radius: 7px;
-}
-#pic {
-  float: left;
-  margin: 10px;
-}
 #txt {
+  margin-left: 320px;
   margin-top: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
-  margin-left: 330px;
 }
-
-img {
-  width: 300px;
-  height: 300px;
-  border-radius: 7px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+ul {
+  list-style-type: circle;
 }
 iframe {
   margin: 10px;
   height: 95%;
   width: 96%;
 }
-#film {
+.film {
   border: rgb(226, 226, 226) 1px solid;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 7px;
