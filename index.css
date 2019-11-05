@@ -82,55 +82,42 @@ body {
   margin-left: 6px;
   font-size: 17px;
 }
-.pic {
-  float: left;
-}
-#ima {
-  width: 300px;
-  height: 300px;
-  border-radius: 7px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-  position: absolute;
-  margin: 10px;
-}
-#btn2 {
-  position: relative;
-  margin-left: 10px;
-  margin-top: 320px;
-  margin-left: 140px;
-}
 .info {
   border: rgb(226, 226, 226) 1px solid;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-  overflow: auto;
-  width: fit-content;
   border-radius: 7px;
   margin-top: 10px;
-  left: 0;
-  right: 0;
+  flex-direction: row;
 }
-#txt {
-  margin-left: 320px;
-  margin-top: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
+#ima {
+  width: 410px;
+  height: 410px;
+  border-radius: 7px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  margin: 10px;
 }
+
 ul {
   list-style-type: circle;
 }
+.txt {
+  margin: 10px;
+}
+
+@media screen and (min-width: 1100px) {
+  .pic {
+    float: left;
+  }
+  .txt {
+    width: 60%;
+    margin-left: 40%;
+  }
+}
+
 iframe {
   margin: 10px;
   height: 95%;
   width: 96%;
-}
-.film {
-  border: rgb(226, 226, 226) 1px solid;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 7px;
-  overflow: auto;
-  height: 100%;
-  position: absolute;
-  margin: 10px;
-  left: 0;
-  right: 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }

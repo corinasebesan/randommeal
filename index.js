@@ -57,10 +57,8 @@ function showMeal(meal) {
   const instructions = document.getElementById("instructions");
   const tags = document.getElementById("tags");
   const ingredients = document.getElementById("ingredients");
-  const vid = document.getElementById("vid");
 
   pic.src = meal.picture;
-  vid.src = meal.video;
   title.innerHTML = meal.title;
   category.innerHTML = `<b>Category:</b> ${meal.category}`;
   instructions.innerHTML = meal.instructions;
@@ -71,6 +69,9 @@ function showMeal(meal) {
       return `<li><b>${ingredient.name}</b> - <em>${ingredient.measurement}</em></li>`;
     })
     .join("");
+  document.getElementById("btn2").onclick = () => {
+    openWindow(meal);
+  };
 }
 
 function openWindow(meal) {
@@ -79,7 +80,30 @@ function openWindow(meal) {
     null,
     "height=600,width=900,status=yes,toolbar=no,menubar=no,location=no"
   );
-  newWindow.document.innerHTML = `<iframe id="vi" src="${meal.video}"> </iframe>`;
+  newWindow.document.write("<head>");
+  newWindow.document.write(
+    "<meta http-equiv='" +
+      "X-UA-Compatible" +
+      "' content='" +
+      "ie=edge" +
+      "' />"
+  );
+  newWindow.document.write("<title>Meal Generator</title>");
+  newWindow.document.write(
+    "<link rel='" +
+      "stylesheet" +
+      "' type='" +
+      "text/css" +
+      "' href='" +
+      "index.css" +
+      "' />"
+  );
+  newWindow.document.write("</head>");
+  newWindow.document.write("<body>");
+  newWindow.document.write(
+    "<iframe id='" + "vi" + "' src='" + meal.video + "'> </iframe>"
+  );
+  newWindow.document.write("</body>");
 }
 
 function setValue(value) {
@@ -91,8 +115,5 @@ function main() {
 
   document.getElementById("btn1").onclick = () => {
     getMeal().then(meal => showMeal(meal));
-  };
-  document.getElementById("btn2").onclick = () => {
-    getMeal().then(meal => openWindow(meal));
   };
 }
