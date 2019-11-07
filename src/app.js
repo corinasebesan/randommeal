@@ -19,6 +19,9 @@ class App {
     const instructions = document.getElementById("instructions");
     const tags = document.getElementById("tags");
     const ingredients = document.getElementById("ingredients");
+    var modal = document.getElementById("myModal");
+    var span = document.getElementsByClassName("close")[0];
+    const vid = document.getElementById("vi");
 
     pic.src = meal.picture;
     title.innerHTML = meal.title;
@@ -32,7 +35,16 @@ class App {
       })
       .join("");
     document.getElementById("btn2").onclick = () => {
-      openWindow(meal);
+      modal.style.display = "block";
+      vid.src = meal.video;
+    };
+    span.onclick = function() {
+      modal.style.display = "none";
+    };
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
     };
   }
 
