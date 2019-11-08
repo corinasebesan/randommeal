@@ -4,21 +4,31 @@
   "description": "This project gives you a random meal.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d public -w"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/corinasebesan/randommeal.git"
   },
-  "author": "",
+  "author": "Corina Sebesan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/corinasebesan/randommeal/issues"
   },
   "homepage": "https://github.com/corinasebesan/randommeal#readme",
   "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
     "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2"
-  }
+  },
+  "dependencies": {
+    "uniq": "^1.0.1"
+  },
+  "keywords": [
+    "meal"
+  ]
 }

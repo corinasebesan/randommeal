@@ -2,7 +2,7 @@ h1,
 h2,
 h4 {
   color: rgb(54, 54, 54);
-  font-family: "Oswald", sans-serif;
+  nfont-family: "Oswald", sans-serif;
 }
 h3,
 p,
@@ -43,7 +43,7 @@ h1 {
 body {
   overflow: scroll;
 }
-.titlul {
+.title {
   text-align: center;
 }
 .btn {
@@ -93,8 +93,8 @@ body {
   position: relative;
 }
 #ima {
-  width: 410px;
-  height: 410px;
+  width: 70%;
+  height: 70%;
   border-radius: 7px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   margin: 10px;
@@ -106,7 +106,7 @@ body {
   position: absolute;
   display: none;
   top: 42%;
-  left: 10em;
+  left: 30%;
 }
 #ima:hover + button {
   display: block;
