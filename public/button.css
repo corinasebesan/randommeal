@@ -1,0 +1,29 @@
+.btn {
+  background-color: var(--main-color);
+  border: var(--main-color) 1px solid;
+  color: white;
+  padding: 12px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+  border-radius: 7px;
+  cursor: pointer;
+  display: inline-flex;
+  align-content: center;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: var(--main-color);
+}
+
+.btn-small {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.btn-big {
+  font-size: 18px;
+  font-weight: bold;
+}

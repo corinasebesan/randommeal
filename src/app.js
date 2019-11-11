@@ -23,7 +23,8 @@ class App {
     var span = document.getElementsByClassName("close")[0];
     const vid = document.getElementById("vi");
 
-    pic.src = meal.picture;
+    pic.style.backgroundImage = `url(${meal.picture})`;
+
     title.innerHTML = meal.title;
     category.innerHTML = `<b>Category:</b> ${meal.category}`;
     instructions.innerHTML = meal.instructions;
