@@ -4,8 +4,8 @@
   "description": "This project gives you a random meal.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src -d public -w"
+    "start": "webpack --mode development --watch",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -21,13 +21,15 @@
     "@babel/cli": "^7.7.0",
     "@babel/core": "^7.7.2",
     "@babel/preset-env": "^7.7.1",
+    "@babel/preset-typescript": "^7.7.2",
+    "babel-loader": "^8.0.6",
     "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2"
+    "eslint-plugin-import": "^2.18.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   },
-  "dependencies": {
-    "uniq": "^1.0.1"
-  },
+  "dependencies": {},
   "keywords": [
     "meal"
   ]
