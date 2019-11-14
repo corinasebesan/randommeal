@@ -15,40 +15,48 @@
     />
     <link rel="stylesheet" type="text/css" href="./index.css" />
   </head>
-  <body class="textcolor">
-    <section class="maintitle">
-      <h1 class="font-oswald m0 huge-font titlecolor">Feeling Hungry?</h1>
-      <h2 class="font-sans medium-font m0">
+  <body class="body body--color">
+    <section class="header header--align">
+      <h1 class="title--font text--margin0 h1--size title--color">
+        Feeling Hungry?
+      </h1>
+      <h2 class="text--font h2--size text--margin0">
         Get a random meal by clicking the button
       </h2>
-      <button class="btn btn-big mt" id="btn1">
-        GET MEAL <i class="material-icons" id="fastfood">fastfood</i>
+      <button class="btn btn--big" id="btn1">
+        GET MEAL <i class="btn__fastfood" id="fastfood">fastfood</i>
       </button>
     </section>
-    <section class="panel mt">
-      <div class="left">
-        <div id="ima">
-          <div class="ima-overlay">
+    <section class="panel panel--align panel--margin">
+      <div class="panel__left">
+        <div class="img" id="ima">
+          <div class="img__overlay">
             <button class="btn" id="btn2">
-              <i class="material-icons">play_arrow</i>
+              <i class="btn__play">play_arrow</i>
             </button>
           </div>
         </div>
       </div>
-      <div class="right">
+      <div class="panel__right">
         <div>
-          <h3 class="font-oswald big-font m0 titlecolor" id="title"></h3>
-          <p class="font-sans small-font m0" id="category"></p>
-          <p class="font-sans small-font m0" id="tags"></p>
-          <p class="font-sans small-font" id="instructions"></p>
-          <h4 class="font-oswald small-font m0">Ingredients:</h4>
-          <ul id="ingredients" class="font-sans small-font m0"></ul>
+          <h3
+            class="title--font h3--size text--margin0 title--color"
+            id="title"
+          ></h3>
+          <p class="text--font text--size text--margin0" id="category"></p>
+          <p class="text--font text--size text--margin0" id="tags"></p>
+          <p class="text--font text--size" id="instructions"></p>
+          <h4 class="title--font text--size text--margin0">Ingredients:</h4>
+          <ul
+            id="ingredients"
+            class="ul text--font text--size text--margin0"
+          ></ul>
         </div>
       </div>
       <div id="myModal" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <iframe id="vi" src=""> </iframe>
+        <div class="modal__content">
+          <span class="modal__close">&times;</span>
+          <iframe class="modal__iframe" id="vi" src=""> </iframe>
         </div>
       </div>
     </section>

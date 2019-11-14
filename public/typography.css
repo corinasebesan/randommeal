@@ -1,37 +1,37 @@
-.huge-font {
+.h1--size {
   font-size: 40px;
 }
-.big-font {
-  font-size: 30px;
-}
-.medium-font {
+.h2--size {
   font-size: 20px;
 }
-.small-font {
+.h3--size {
+  font-size: 30px;
+}
+.text--size {
   font-size: 18px;
 }
 
-.font-oswald {
+.title--font {
   font-family: "Oswald", sans-serif;
 }
 
-.font-sans {
+.text--font {
   font-family: "PT Sans", sans-serif;
 }
-.maintitle {
+.header--align {
   text-align: center;
 }
-.panel {
+.panel--align {
   text-align: left;
 }
 
-ul {
+.ul {
   list-style-type: circle;
 }
 
-.textcolor {
+.body--color {
   color: rgb(62, 64, 62);
 }
-.titlecolor {
+.title--color {
   color: var(--main-color);
 }
