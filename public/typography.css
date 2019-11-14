@@ -1,25 +1,14 @@
-h1,
-h3 {
-  font-family: "Oswald", sans-serif;
+.huge-font {
+  font-size: 40px;
 }
-
-h2 {
-  font-family: "PT Sans", sans-serif;
+.big-font {
+  font-size: 30px;
 }
-
-h1 {
-  font-size: 32px;
-  color: var(--main-color);
+.medium-font {
+  font-size: 20px;
 }
-
-h1,
-h2,
-h3 {
-  margin: 0;
-}
-
-p {
-  font-family: "PT Sans", sans-serif;
+.small-font {
+  font-size: 18px;
 }
 
 .font-oswald {
@@ -28,4 +17,21 @@ p {
 
 .font-sans {
   font-family: "PT Sans", sans-serif;
+}
+.maintitle {
+  text-align: center;
+}
+.panel {
+  text-align: left;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+.textcolor {
+  color: rgb(62, 64, 62);
+}
+.titlecolor {
+  color: var(--main-color);
 }

@@ -15,10 +15,12 @@
     />
     <link rel="stylesheet" type="text/css" href="./index.css" />
   </head>
-  <body>
-    <section>
-      <h1>Feeling Hungry?</h1>
-      <h2>Get a random meal by clicking the button</h2>
+  <body class="textcolor">
+    <section class="maintitle">
+      <h1 class="font-oswald m0 huge-font titlecolor">Feeling Hungry?</h1>
+      <h2 class="font-sans medium-font m0">
+        Get a random meal by clicking the button
+      </h2>
       <button class="btn btn-big mt" id="btn1">
         GET MEAL <i class="material-icons" id="fastfood">fastfood</i>
       </button>
@@ -27,7 +29,7 @@
       <div class="left">
         <div id="ima">
           <div class="ima-overlay">
-            <button class="btn">
+            <button class="btn" id="btn2">
               <i class="material-icons">play_arrow</i>
             </button>
           </div>
@@ -35,36 +37,20 @@
       </div>
       <div class="right">
         <div>
-          <h2 id="title"></h2>
-          <p id="category"></p>
-          <p id="tags"></p>
-          <p id="instructions"></p>
-          <h4>Ingredients:</h4>
-          <ul id="ingredients" class="font-sans"></ul>
+          <h3 class="font-oswald big-font m0 titlecolor" id="title"></h3>
+          <p class="font-sans small-font m0" id="category"></p>
+          <p class="font-sans small-font m0" id="tags"></p>
+          <p class="font-sans small-font" id="instructions"></p>
+          <h4 class="font-oswald small-font m0">Ingredients:</h4>
+          <ul id="ingredients" class="font-sans small-font m0"></ul>
         </div>
-      </div>
-      <!-- <div class="pic">
-        <img id="ima" src="" alt="food" />
-        <div class="img-overlay">
-          <button class="btn">
-            <i class="material-icons">play_arrow</i>
-          </button>
-        </div>
-      </div>
-      <div>
-        <h2 id="title"></h2>
-        <p id="category"></p>
-        <p id="tags"></p>
-        <p id="instructions"></p>
-        <h4>Ingredients:</h4>
-        <ul id="ingredients" class="font-sans"></ul>
       </div>
       <div id="myModal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
           <iframe id="vi" src=""> </iframe>
         </div>
-      </div> -->
+      </div>
     </section>
     <script src="bundle.js"></script>
   </body>
