@@ -15,7 +15,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [{ loader: "babel-loader", options: { cacheDirectory: true } }]
+        use: ["style-loader", "css-loader"]
       }
     ]
   },
