@@ -20,7 +20,7 @@ class App {
     const tags = document.getElementById("tags");
     const ingredients = document.getElementById("ingredients");
     var modal = document.getElementById("myModal");
-    var span = document.getElementsByClassName("modal__close")[0];
+    var span = document.getElementsByClassName("modal__btn-close")[0];
     const vid = document.getElementById("vi");
 
     pic.style.backgroundImage = `url(${meal.picture})`;
