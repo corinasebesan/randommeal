@@ -6,7 +6,7 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-
+  outline: none;
   border-radius: 7px;
   cursor: pointer;
   display: inline-flex;
