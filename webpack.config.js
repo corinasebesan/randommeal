@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/javascript/index.js",
   output: {
     path: path.resolve(__dirname, "public"),
     filename: "bundle.js"
@@ -12,6 +12,14 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: [{ loader: "babel-loader", options: { cacheDirectory: true } }]
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: "css-loader"
+          }
+        ]
       }
     ]
   },

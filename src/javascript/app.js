@@ -36,11 +36,12 @@ class App {
       })
       .join("");
     document.getElementById("btn2").onclick = () => {
-      modal.style.display = "block";
+      modal.style.display = "flex";
       vid.src = meal.video;
     };
     span.onclick = function() {
       modal.style.display = "none";
+      vid.src = "";
     };
     window.onclick = function(event) {
       if (event.target == modal) {

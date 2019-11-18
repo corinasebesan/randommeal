@@ -22,14 +22,14 @@
   border-radius: 7px;
 }
 
-.modal__close:hover,
-.modal__close:focus {
+.modal__btn-close:hover,
+.modal__btn-close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
 
-.modal__close {
+.modal__btn-close {
   color: #aaa;
   float: right;
   font-size: 28px;
