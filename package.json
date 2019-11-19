@@ -31,7 +31,9 @@
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   },
-  "dependencies": {},
+  "dependencies": {
+    "lit-html": "^1.1.2"
+  },
   "keywords": [
     "meal"
   ]

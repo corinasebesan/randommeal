@@ -13,53 +13,9 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <script type="module" src="bundle.js">
+      import { html, render } from "../node_modules/lit-html/lit-html.js";
+    </script>
   </head>
-  <body class="body body--color">
-    <section class="header header--align">
-      <h1 class="title--font text--margin0 h1--size title--color">
-        Feeling Hungry?
-      </h1>
-      <h2 class="text--font h2--size text--margin0">
-        Get a random meal by clicking the button
-      </h2>
-      <button class="btn btn--big" id="btn1">
-        GET MEAL
-        <i class="material-icons btn__fastfood" id="fastfood">fastfood</i>
-      </button>
-    </section>
-    <section class="panel panel--align panel--margin">
-      <div class="panel__left">
-        <div class="img" id="ima">
-          <div class="img__overlay">
-            <button class="btn" id="btn2">
-              <i class="material-icons btn__play">play_arrow</i>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="panel__right">
-        <div>
-          <h3
-            class="title--font h3--size text--margin0 title--color"
-            id="title"
-          ></h3>
-          <p class="text--font text--size text--margin0" id="category"></p>
-          <p class="text--font text--size text--margin0" id="tags"></p>
-          <p class="text--font text--size" id="instructions"></p>
-          <h4 class="title--font text--size text--margin0">Ingredients:</h4>
-          <ul
-            id="ingredients"
-            class="ul text--font text--size text--margin0"
-          ></ul>
-        </div>
-      </div>
-      <div id="myModal" class="modal">
-        <div class="modal__content">
-          <span class="modal__btn-close">&times;</span>
-          <iframe class="modal__iframe" id="vi" src=""> </iframe>
-        </div>
-      </div>
-    </section>
-    <script src="bundle.js"></script>
-  </body>
+  <body class="body body--color"></body>
 </html>
