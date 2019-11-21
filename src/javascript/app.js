@@ -15,18 +15,6 @@ class App {
 
   showMeal(meal) {
     const htmlCode2 = meal => html`
-      <section class="header header--align">
-        <h1 class="title--font text--margin0 h1--size title--color">
-          Feeling Hungry?
-        </h1>
-        <h2 class="text--font h2--size text--margin0">
-          Get a random meal by clicking the button
-        </h2>
-        <button class="btn btn--big" id="btn1">
-          GET MEAL
-          <i class="material-icons btn__fastfood" id="fastfood">fastfood</i>
-        </button>
-      </section>
       <section class="panel panel--align panel--margin">
         <div class="panel__left">
           <div class="img" style="background-image: url(${meal.picture});">
@@ -72,6 +60,7 @@ class App {
         </div>
       </section>
     `;
+
     render(htmlCode2(meal), document.body);
 
     var modal = document.getElementById("myModal");
