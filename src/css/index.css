@@ -1,8 +1,6 @@
 @import "./vars.css";
 @import "./button.css";
 @import "./typography.css";
-@import "./modal.css";
-@import "./image.css";
 
 .body {
   overflow: scroll;
@@ -13,19 +11,6 @@
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   border-radius: 8px;
   display: flex;
-  box-sizing: border-box;
-}
-
-.panel__left {
-  width: 400px;
-  min-height: 400px;
-  box-sizing: border-box;
-  padding: 12px;
-}
-
-.panel__right {
-  flex: 1;
-  padding: 12px;
   box-sizing: border-box;
 }
 

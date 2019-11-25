@@ -14,11 +14,6 @@
   margin-top: 32px;
 }
 
-.btn__fastfood {
-  margin-left: 6px;
-  font-size: 17px;
-}
-
 .btn:hover {
   background-color: transparent;
   color: var(--main-color);

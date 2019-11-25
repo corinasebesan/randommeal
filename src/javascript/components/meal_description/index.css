@@ -1,0 +1,14 @@
+.panel__right {
+  flex: 1;
+  padding: 12px;
+  box-sizing: border-box;
+}
+.h3--size {
+  font-size: 30px;
+}
+.text--size {
+  font-size: 18px;
+}
+.ul {
+  list-style-type: circle;
+}

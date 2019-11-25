@@ -1,32 +1,15 @@
-.h1--size {
-  font-size: 40px;
-}
-.h2--size {
-  font-size: 20px;
-}
-.h3--size {
-  font-size: 30px;
-}
-.text--size {
-  font-size: 18px;
-}
-
 .title--font {
   font-family: "Oswald", sans-serif;
 }
-
 .text--font {
   font-family: "PT Sans", sans-serif;
 }
+
 .header--align {
   text-align: center;
 }
 .panel--align {
   text-align: left;
-}
-
-.ul {
-  list-style-type: circle;
 }
 
 .body--color {

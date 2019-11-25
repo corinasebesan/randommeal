@@ -1,4 +1,7 @@
 import Meal from "./meal.js";
+import Header from "./components/header";
+import MealVideo from "./components/meal_video";
+import MealDescription from "./components/meal_description";
 import { html, render } from "lit-html";
 
 class App {
@@ -14,54 +17,32 @@ class App {
   }
 
   showMeal(meal) {
-    const htmlCode2 = meal => html`
-      <section class="panel panel--align panel--margin">
-        <div class="panel__left">
-          <div class="img" style="background-image: url(${meal.picture});">
-            <div class="img__overlay">
-              <button class="btn" id="btn2">
-                <i class="material-icons btn__play">play_arrow</i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="panel__right">
-          <div>
-            <h3 class="title--font h3--size text--margin0 title--color">
-              ${meal.title}
-            </h3>
-            <p class="text--font text--size text--margin0">
-              <b>Category:</b> ${meal.category}
-            </p>
-            <p class="text--font text--size text--margin0">
-              <b>Tags:</b> ${meal.tags.map(e => e).join(", ")}
-            </p>
-            <p class="text--font text--size">
-              ${meal.instructions}
-            </p>
-            <h4 class="title--font text--size text--margin0">Ingredients:</h4>
-            <ul class="ul text--font text--size text--margin0">
-              ${meal.ingredients().map(
-                ingredient => html`
-                  <li>
-                    <b>${ingredient.name}</b> -
-                    <em>${ingredient.measurement}</em>
-                  </li>
-                `
-              )}
-            </ul>
-          </div>
-        </div>
-        <div id="myModal" class="modal">
-          <div class="modal__content">
-            <span class="modal__btn-close">&times;</span>
-            <iframe class="modal__iframe" id="vi" src=""> </iframe>
-          </div>
-        </div>
-      </section>
-    `;
+    let $container1 = document.getElementsByClassName("header");
+    let $container2 = document.getElementsByClassName("panel");
 
-    render(htmlCode2(meal), document.body);
+    let header = new Header({});
+    header.render($container1);
+
+    let mealV = new MealVideo({
+      picture: meal.picture
+    });
+    mealV.render($container2);
+
+    let mealD = new MealDescription({
+      title: meal.title,
+      category: meal.category,
+      tags: meal.tags.map(e => e).join(", "),
+      instructions: meal.instructions,
+      ingredients: meal.ingredients().map(
+        ingredient => html`
+          <li>
+            <b>${ingredient.name}</b> -
+            <em>${ingredient.measurement}</em>
+          </li>
+        `
+      )
+    });
+    mealD.render($container2);
 
     var modal = document.getElementById("myModal");
     var span = document.getElementsByClassName("modal__btn-close")[0];
