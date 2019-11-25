@@ -10,8 +10,9 @@ class MealVideo {
     };
   }
 
-  render($container) {
-    $container.innerHTML = m.render(template, this.props);
+  render({ picture, url } = {}) {
+    const html = m.render(template, { picture, url });
+    return html;
   }
 }
 

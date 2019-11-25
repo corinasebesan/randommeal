@@ -1,7 +1,7 @@
 import Meal from "./meal.js";
 import Header from "./components/header";
-import MealVideo from "./components/meal_video";
-import MealDescription from "./components/meal_description";
+import MealVideo from "./components/meal-video";
+import MealDescription from "./components/meal-description";
 import { html, render } from "lit-html";
 
 class App {

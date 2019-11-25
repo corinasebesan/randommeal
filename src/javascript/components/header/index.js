@@ -7,12 +7,20 @@ class Header {
     this.props = {
       title: "Feeling hungry ?",
       subtitle: "Get a random meal by clicking the button",
+      onClick: () => true,
       ...props
     };
   }
 
-  render($container) {
-    $container.innerHTML = m.render(template, this.props);
+  render() {
+    const html = m.render(template, { ...this.props });
+    return html;
+  }
+
+  addEvents() {
+    document.getElementById("btn1").addEventListener("click", () => {
+      this.props.onClick();
+    });
   }
 }
 

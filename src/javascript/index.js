@@ -1,7 +1,7 @@
-import App from "./app.js";
+import App from "./components/app";
 import "../css/index.css";
 
 document.body.onload = () => {
-  var app = new App();
-  app.run();
+  const app = new App(document.body);
+  app.requestMeal();
 };

@@ -11,6 +11,11 @@
   </p>
   <h4 class="title--font text--size text--margin0">Ingredients:</h4>
   <ul class="ul text--font text--size text--margin0">
-    {{ingredients}}
+    {{#ingredients}}
+    <li>
+      <b>{{name}}</b> -
+      <em>{{measurement}}</em>
+    </li>
+    {{/ingredients}}
   </ul>
 </div>
