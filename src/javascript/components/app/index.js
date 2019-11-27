@@ -31,12 +31,12 @@ class App {
     });
 
     this.$container.innerHTML = html;
-    this.addEvents();
+    this.addEvents(meal);
   }
 
-  addEvents() {
+  addEvents(meal) {
     this.header.addEvents();
-    // this.description.addEvents();
+    this.video.addEvents(meal);
   }
 }
 
