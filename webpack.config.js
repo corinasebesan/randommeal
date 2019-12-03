@@ -1,13 +1,14 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./src/javascript/index.js",
+  entry: "./src/javascript/index.ts",
   output: {
     path: path.resolve(__dirname, "public"),
     filename: "bundle.js"
   },
   module: {
     rules: [
+      { test: /\.ts?$/, loader: "awesome-typescript-loader" },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -24,7 +25,8 @@ module.exports = {
     ]
   },
   stats: {
-    colors: true
+    colors: true,
+    errorDetails: true
   },
   devtool: "source-map"
 };

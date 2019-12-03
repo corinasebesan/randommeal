@@ -1,4 +1,4 @@
-import m from "mustache";
+import m = require("mustache");
 
 import template from "./template.html";
 import Meal from "../../meal";
@@ -7,8 +7,8 @@ import "./index.css";
 class MealDescription {
   constructor() {}
 
-  render(meal) {
-    const html = m.render(template, meal);
+  render(meal: Meal): string {
+    const html: string = m.render(template, meal);
     return html;
   }
 }

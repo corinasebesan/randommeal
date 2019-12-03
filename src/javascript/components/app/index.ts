@@ -1,12 +1,17 @@
-import m from "mustache";
+import m = require("mustache");
 import Header from "../header";
 import Description from "../meal-description";
 import Video from "../meal-video";
 import template from "./template.html";
 import api from "../../api";
+import Meal from "../../meal";
 
 class App {
-  constructor($container) {
+  header: Header;
+  description: Description;
+  video: Video;
+  $container: HTMLElement;
+  constructor($container: HTMLElement) {
     this.header = new Header({
       onClick: () => {
         this.requestMeal();
@@ -23,7 +28,7 @@ class App {
     });
   }
 
-  render({ meal } = {}) {
+  render({ meal = null } = {}) {
     const html = m.render(template, {
       header: this.header.render(),
       left: this.video.render({ picture: meal.picture }),
@@ -34,7 +39,7 @@ class App {
     this.addEvents(meal);
   }
 
-  addEvents(meal) {
+  addEvents(meal: Meal) {
     this.header.addEvents();
     this.video.addEvents(meal);
   }
