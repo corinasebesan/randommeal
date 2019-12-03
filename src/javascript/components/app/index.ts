@@ -1,4 +1,4 @@
-import m = require("mustache");
+import * as m from "mustache";
 import Header from "../header";
 import Description from "../meal-description";
 import Video from "../meal-video";

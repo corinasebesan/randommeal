@@ -8,9 +8,8 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.ts?$/, loader: "awesome-typescript-loader" },
       {
-        test: /\.js$/,
+        test: /\.ts$/,
         exclude: /node_modules/,
         use: [{ loader: "babel-loader", options: { cacheDirectory: true } }]
       },
@@ -23,6 +22,9 @@ module.exports = {
         use: ["html-loader"]
       }
     ]
+  },
+  resolve: {
+    extensions: [".js", ".ts"]
   },
   stats: {
     colors: true,

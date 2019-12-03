@@ -1,4 +1,4 @@
-import m = require("mustache");
+import * as m from "mustache";
 
 import template from "./template.html";
 import Meal from "../../meal";
