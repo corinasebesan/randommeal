@@ -1,6 +1,7 @@
 import * as m from "mustache";
 import template from "./template.html";
 import "./index.css";
+import Meal from "../../../../../../mealGen/randommeal/src/javascript/meal";
 
 class MealVideo {
   props: { picture: string; onClick: () => void };
@@ -16,9 +17,7 @@ class MealVideo {
     const html: string = m.render(template, { picture });
     return html;
   }
-  addEvents(
-    meal: import("../../../../../mealGen/src/javascript/meal").default
-  ): void {
+  addEvents(meal: Meal): void {
     var mod: HTMLDivElement = document.getElementById(
       "myModal"
     ) as HTMLDivElement;
@@ -34,7 +33,7 @@ class MealVideo {
     bPlay.addEventListener("click", () => {
       this.props.onClick();
       mod.style.display = "flex";
-      vid.src = meal.video;
+      vid.src = meal.youtubeUrl;
     });
     bClose.onclick = function(): void {
       mod.style.display = "none";

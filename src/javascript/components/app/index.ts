@@ -31,7 +31,7 @@ class App {
   render({ meal = null } = {}) {
     const html = m.render(template, {
       header: this.header.render(),
-      left: this.video.render({ picture: meal.picture }),
+      left: this.video.render({ picture: meal.thumnailUrl }),
       right: this.description.render(meal)
     });
 
