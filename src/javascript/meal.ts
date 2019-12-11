@@ -2,7 +2,16 @@ import Ingredient from "./ingredients";
 
 class Meal {
   public tagsToDisplay: Array<string>;
-
+  /**
+   * It makes an object with all the information related to the meal
+   * @param title the title of the meal
+   * @param thumnailUrl the url to the picture of the meal
+   * @param category the 
+   * @param instructions 
+   * @param youtubeUrl 
+   * @param ingredients 
+   * @param tagsString 
+   */
   constructor(
     public title: string,
     public thumnailUrl: string,

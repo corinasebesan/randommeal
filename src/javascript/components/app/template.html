@@ -1,6 +1,16 @@
-<div>
-  <section id="header" class="header header--align">{{{header}}}</section>
-  <section id="body" class="panel panel--align panel--margin">
+<div ng-controller="MainController">
+  <section
+    id="header"
+    class="header header--align"
+    ng-controller="HeaderController"
+  >
+    {{{header}}}
+  </section>
+  <section
+    id="body"
+    class="panel panel--align panel--margin"
+    ng-controller="MealDetailsController"
+  >
     {{{left}}} {{{right}}}
   </section>
 </div>

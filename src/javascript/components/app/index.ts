@@ -22,6 +22,7 @@ class App {
     this.$container = $container;
   }
 
+  //Gets the data from the api and renders it on the page
   requestMeal() {
     api.getMeal().then(meal => {
       this.render({ meal });
@@ -39,6 +40,7 @@ class App {
     this.addEvents(meal);
   }
 
+  //Adds the on click events
   addEvents(meal: Meal) {
     this.header.addEvents();
     this.video.addEvents(meal);
