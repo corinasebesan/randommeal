@@ -2,12 +2,12 @@ import * as m from "mustache";
 import template from "./template.html";
 import "./index.css";
 
-var HeaderController = function($scope) {
+/*var HeaderController = function($scope) {
   $scope.title = "Feeling hungry ?";
   $scope.subtitle = "Get a random meal by clicking the button";
-};
+};*/
 
-/*class Header {
+class Header {
   props: { onClick: () => void; title: string; subtitle: string };
   constructor(props: { onClick: () => void }) {
     this.props = {
@@ -30,4 +30,4 @@ var HeaderController = function($scope) {
   }
 }
 
-export default Header;*/
+export default Header;
