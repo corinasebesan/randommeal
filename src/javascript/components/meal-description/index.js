@@ -7,8 +7,8 @@ import "./index.css";
 class MealDescription {
   constructor() {}
 
-  render(meal: Meal): string {
-    const html: string = m.render(template, meal);
+  render(meal) {
+    const html = m.render(template, meal);
     return html;
   }
 }

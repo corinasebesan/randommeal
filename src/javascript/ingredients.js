@@ -4,7 +4,7 @@ class Ingredient {
    * @param name the ingredient's name
    * @param measurement the measurement of the ingredient
    */
-  constructor(public name: string, public measurement: string) {}
+  constructor(name, measurement) {}
 }
 
 export default Ingredient;

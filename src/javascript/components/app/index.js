@@ -7,11 +7,11 @@ import api from "../../api";
 import Meal from "../../meal";
 
 class App {
-  header: Header;
-  description: Description;
-  video: Video;
-  $container: HTMLElement;
-  constructor($container: HTMLElement) {
+  header;
+  description;
+  video;
+  $container;
+  constructor($container) {
     this.header = new Header({
       onClick: () => {
         this.requestMeal();
@@ -41,7 +41,7 @@ class App {
   }
 
   //Adds the on click events
-  addEvents(meal: Meal) {
+  addEvents(meal) {
     this.header.addEvents();
     this.video.addEvents(meal);
   }

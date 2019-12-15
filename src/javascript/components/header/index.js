@@ -8,8 +8,8 @@ import "./index.css";
 };*/
 
 class Header {
-  props: { onClick: () => void; title: string; subtitle: string };
-  constructor(props: { onClick: () => void }) {
+  props;
+  constructor(props) {
     this.props = {
       title: "Feeling hungry ?",
       subtitle: "Get a random meal by clicking the button",
@@ -18,12 +18,12 @@ class Header {
     };
   }
 
-  render(): string {
-    const html: string = m.render(template, { ...this.props });
+  render() {
+    const html = m.render(template, { ...this.props });
     return html;
   }
 
-  addEvents(): void {
+  addEvents() {
     document.getElementById("btn1").addEventListener("click", () => {
       this.props.onClick();
     });
