@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Meal Generator</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./components/header/header.css" />
+    <link rel="stylesheet" href="./components/meal/meal.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Oswald|PT+Sans&display=swap"
       rel="stylesheet"
@@ -18,7 +21,20 @@
       data-semver="1.6.6"
       src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"
     ></script>
-    <script type="module" src="bundle.js"></script>
+    <script src="app.js"></script>
+    <script src="./components/header/header.controller.js"></script>
+    <script src="./components/meal/meal.controller.js"></script>
   </head>
-  <body class="body body--color" data-ng-init="loadMeal()"></body>
+  <body class="body body--color">
+    <section
+      id="header"
+      class="header header--align"
+      ng-include="'./components/header/header.tpl.html'"
+    ></section>
+    <section
+      id="body"
+      class="panel panel--align panel--margin"
+      ng-view
+    ></section>
+  </body>
 </html>

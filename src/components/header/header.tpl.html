@@ -1,0 +1,22 @@
+<div ng-controller="HeaderController">
+  <h1 class="title--font text--margin0 h1--size title--color">
+    Feeling hungry ?
+  </h1>
+  <h2 class="text--font h2--size text--margin0">
+    Get a random meal by clicking the button
+  </h2>
+  <button class="btn btn--big" id="search-button" ng-click="loadMeal()">
+    GET MEAL
+    <i class="material-icons btn__fastfood" id="fastfood">fastfood</i>
+  </button>
+  <form name="searchUser" ng-submit="search(mealName)">
+    <input
+      type="search"
+      class="search__box text--font body--color"
+      placeholder="Meal name"
+      required
+      ng-model="mealName"
+    />
+    <input type="submit" class="btn btn--small" value="Search" />
+  </form>
+</div>

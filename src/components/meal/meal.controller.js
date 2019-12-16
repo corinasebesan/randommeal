@@ -1,5 +1,3 @@
-import "./index.css";
-
 (function() {
   var app = angular.module("mealViewer");
 

@@ -2,7 +2,7 @@
   "compilerOptions": {
     "outDir": "./public",
     "allowJs": true,
-    "target": "es5"
+    "target": "es6"
   },
-  "include": ["./src/javascript/**/*", "html.d.ts"]
+  "include": ["./src/javascript/**/*", "html.d.ts", "src/services"]
 }

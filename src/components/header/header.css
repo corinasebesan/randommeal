@@ -8,3 +8,9 @@
   margin-left: 6px;
   font-size: 17px;
 }
+.search__box {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  outline: none;
+}
