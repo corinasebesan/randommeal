@@ -1,16 +1,11 @@
-import * as m from "mustache";
+import m from "mustache";
 import Header from "../header";
 import Description from "../meal-description";
 import Video from "../meal-video";
 import template from "./template.html";
 import api from "../../api";
-import Meal from "../../meal";
 
 class App {
-  header;
-  description;
-  video;
-  $container;
   constructor($container) {
     this.header = new Header({
       onClick: () => {
@@ -24,7 +19,7 @@ class App {
 
   //Gets the data from the api and renders it on the page
   requestMeal() {
-    api.getMeal().then(meal => {
+    api.MainController.then(meal => {
       this.render({ meal });
     });
   }

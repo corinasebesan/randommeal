@@ -1,9 +1,8 @@
-import * as m from "mustache";
+import m from "mustache";
 import template from "./template.html";
 import "./index.css";
 
 class MealVideo {
-  props;
   constructor() {
     this.props = {
       picture: "",

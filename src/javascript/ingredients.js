@@ -4,7 +4,10 @@ class Ingredient {
    * @param name the ingredient's name
    * @param measurement the measurement of the ingredient
    */
-  constructor(name, measurement) {}
+  constructor(name, measurement) {
+    this.name = name;
+    this.measurement = measurement;
+  }
 }
 
 export default Ingredient;

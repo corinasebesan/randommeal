@@ -1,7 +1,4 @@
-import Ingredient from "./ingredients";
-
 class Meal {
-  tagsToDisplay;
   /**
    * It makes an object with all the information related to the meal
    * @param title the title of the meal
@@ -21,11 +18,16 @@ class Meal {
     ingredients,
     tagsString
   ) {
-    this.tagsToDisplay =
-      this.tagsString && this.tagsString.length > 0
+    this.title = title;
+    this.thumnailUrl = thumnailUrl;
+    this.category = category;
+    this.instructions = instructions;
+    this.youtubeUrl = youtubeUrl.replace("watch?v=", "embed/");
+    this.ingredients = ingredients;
+    this.tagsString =
+      tagsString && tagsString.length > 0
         ? tagsString.split(",").map(e => e.toLowerCase())
         : [];
-    this.youtubeUrl = youtubeUrl.replace("watch?v=", "embed/");
   }
 }
 
