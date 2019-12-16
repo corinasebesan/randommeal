@@ -1,13 +1,13 @@
-class Ingredient {
-  /**
-   * It makes ingredient objects
-   * @param name the ingredient's name
-   * @param measurement the measurement of the ingredient
-   */
-  constructor(name, measurement) {
-    this.name = name;
-    this.measurement = measurement;
-  }
-}
-
-export default Ingredient;
+(function() {
+  var ingredients = function() {
+    var getIngredient = function(name, measurement) {
+      this.name = name;
+      this.measurement = measurement;
+    };
+    return {
+      getIngredient: getIngredient
+    };
+  };
+  var app = angular.module("mealViewer");
+  module.factory("ingredients", ingredients);
+})();

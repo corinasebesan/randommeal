@@ -1,37 +1,13 @@
-import m from "mustache";
-import template from "./template.html";
 import "./index.css";
+(function() {
+  var app = angular.module("mealViewer");
 
-var HeaderController = function($scope) {
-  var header = {
-    title: "Feeling hungry ?",
-    subtitle: "Get a random meal by clicking the button",
-    onClick: () => true
-  };
-  $scope.header = header;
-};
-
-/*class Header {
-  constructor(props) {
-    this.props = {
+  var HeaderController = function($scope) {
+    var header = {
       title: "Feeling hungry ?",
-      subtitle: "Get a random meal by clicking the button",
-      onClick: () => true,
-      ...props
+      subtitle: "Get a random meal by clicking the button"
     };
-  }
-
-  render() {
-    const html = m.render(template, { ...this.props });
-    return html;
-  }
-
-  addEvents() {
-    document.getElementById("btn1").addEventListener("click", () => {
-      this.props.onClick();
-    });
-  }
-}
-
-export default Header;
-*/
+    $scope.header = header;
+  };
+  app.controller("HeaderController", HeaderController);
+})();

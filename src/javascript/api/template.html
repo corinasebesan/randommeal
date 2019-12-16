@@ -2,15 +2,13 @@
   <section
     id="header"
     class="header header--align"
+    ng-include="../header/template.html"
     ng-controller="HeaderController"
-  >
-    {{{header}}}
-  </section>
+  ></section>
   <section
     id="body"
     class="panel panel--align panel--margin"
+    ng-include="../meal-description/template.html"
     ng-controller="MealDetailsController"
-  >
-    {{{left}}} {{{right}}}
-  </section>
+  ></section>
 </div>
