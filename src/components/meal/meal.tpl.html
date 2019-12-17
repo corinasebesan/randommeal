@@ -1,36 +1,40 @@
-<div class="panel__right">
+<section id="body" class="panel panel--align panel--margin">
   <div class="panel__left">
-    <div class="img" style="background-image: url({{meal.picture}});">
+    <div class="img" style="background-image: url({{meal.strMealThumb}});">
       <div class="img__overlay">
-        <button class="btn" id="btn2" ng-click="loadVideo()">
+        <button class="btn" id="btn__loadVideo" ng-click="loadVideoModal()">
           <i class="material-icons btn__play">play_arrow</i>
         </button>
       </div>
     </div>
   </div>
-  <h3 class="title--font h3--size text--margin0 title--color">
-    {{meal.title}}
-  </h3>
-  <p class="text--font text--size text--margin0">
-    <b>Category:</b> {{meal.category}}
-  </p>
-  <p class="text--font text--size text--margin0">
-    <b>Tags:</b> {{meal.tagsString}}
-  </p>
-  <p class="text--font text--size">
-    {{meal.instructions}}
-  </p>
-  <h4 class="title--font text--size text--margin0">Ingredients:</h4>
-  <ul class="ul text--font text--size text--margin0">
-    <li ng-repeat="ingredient in meal.ingredients">
-      <b>{{ingredient.name}}</b> -
-      <em>{{ingredient.measurement}}</em>
-    </li>
-  </ul>
-  <div id="myModal" class="modal">
-    <div class="modal__content">
-      <span class="modal__btn-close">&times;</span>
-      <iframe class="modal__iframe" id="vi" src=""> </iframe>
+  <div class="panel__right">
+    <h3 class="title--font h3--size text--margin0 title--color">
+      {{meal.strMeal}}
+    </h3>
+    <p class="text--font text--size text--margin0">
+      <b>Category:</b> {{meal.strCategory}}
+    </p>
+    <p class="text--font text--size text--margin0">
+      <b>Tags:</b> {{meal.strTags}}
+    </p>
+    <p class="text--font text--size">
+      {{meal.strInstructions}}
+    </p>
+    <h4 class="title--font text--size text--margin0">Ingredients:</h4>
+    <ul class="ul text--font text--size text--margin0">
+      <li ng-repeat="ingredient in ingredients">
+        <b>{{ingredient.name}}</b> -
+        <em>{{ingredient.measurement}}</em>
+      </li>
+    </ul>
+    <div id="myModal" class="modal">
+      <div class="modal__content">
+        <span class="modal__btn-close" ng-click="closeVideoModal()"
+          >&times;</span
+        >
+        <iframe class="modal__iframe" id="videoIframe" src=""> </iframe>
+      </div>
     </div>
   </div>
-</div>
+</section>

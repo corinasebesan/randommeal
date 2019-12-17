@@ -1,3 +1,9 @@
 (function() {
-  angular.module("mealViewer", []);
+  var app = angular.module("mealViewer", ["ngRoute"]);
+  app.config(function($routeProvider) {
+    $routeProvider.when("/meal/:mealName", {
+      templateUrl: "./components/meal/meal.tpl.html",
+      controller: "MealController"
+    });
+  });
 })();
