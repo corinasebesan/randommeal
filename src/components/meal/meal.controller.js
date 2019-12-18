@@ -60,28 +60,6 @@
 
     $scope.mealName = $routeParams.mealName;
     mealService.getSearchedMeal($scope.mealName).then(mealDataProcessing);
-
-    /**
-     * It loads the modal that contains the video
-     */
-    $scope.loadVideoModal = function() {
-      var modal = document.getElementById("myModal");
-      var video = document.getElementById("videoIframe");
-
-      modal.style.display = "flex";
-      video.src = $scope.meal.strYoutube;
-    };
-
-    /**
-     * It closes the modal that contains the video
-     */
-    $scope.closeVideoModal = function() {
-      var modal = document.getElementById("myModal");
-      var video = document.getElementById("videoIframe");
-
-      modal.style.display = "none";
-      video.src = "";
-    };
   };
   app.controller("MealController", MealController);
 })();

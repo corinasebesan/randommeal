@@ -1,13 +1,8 @@
 <section id="body" class="panel panel--align panel--margin">
-  <div class="panel__left">
-    <div class="img" style="background-image: url({{meal.strMealThumb}});">
-      <div class="img__overlay">
-        <button class="btn" id="btn__loadVideo" ng-click="loadVideoModal()">
-          <i class="material-icons btn__play">play_arrow</i>
-        </button>
-      </div>
-    </div>
-  </div>
+  <image-video
+    imageSrc="{{meal.strMealThumb}}"
+    videoSrc="{{meal.strYoutube}}"
+  ></image-video>
   <div class="panel__right">
     <h3 class="title--font h3--size text--margin0 title--color">
       {{meal.strMeal}}
@@ -28,13 +23,5 @@
         <em>{{ingredient.measurement}}</em>
       </li>
     </ul>
-    <div id="myModal" class="modal">
-      <div class="modal__content">
-        <span class="modal__btn-close" ng-click="closeVideoModal()"
-          >&times;</span
-        >
-        <iframe class="modal__iframe" id="videoIframe" src=""> </iframe>
-      </div>
-    </div>
   </div>
 </section>

@@ -1,0 +1,18 @@
+<div class="panel__left">
+  <div class="img" style="background-image: url({{$ctrl.imageSrc}});">
+    <div class="img__overlay">
+      <button class="btn" id="btn__loadVideo" ng-click="$ctrl.loadVideoModal()">
+        <i class="material-icons btn__play">play_arrow</i>
+      </button>
+    </div>
+  </div>
+</div>
+<div id="myModal" class="modal">
+  <div class="modal__content">
+    <span class="modal__btn-close" ng-click="$ctrl.closeVideoModal()"
+      >&times;</span
+    >
+    <iframe class="modal__iframe" id="videoIframe" ng-src="{{$ctrl.videoSrc}}">
+    </iframe>
+  </div>
+</div>
