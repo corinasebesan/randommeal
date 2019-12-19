@@ -4,5 +4,5 @@
     "allowJs": true,
     "target": "es6"
   },
-  "include": ["./src/javascript/**/*", "html.d.ts", "src/services"]
+  "include": ["./src/**/*", "html.d.ts", "src/services"]
 }

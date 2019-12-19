@@ -1,6 +1,8 @@
 function ImageVideoController() {
   var ctrl = this;
-
+  ctrl.$onInit = function() {
+    console.log(ctrl.imageSrc + " " + ctrl.videoSrc);
+  };
   /**
    * It loads the modal that contains the video
    */
@@ -22,12 +24,14 @@ function ImageVideoController() {
     video.src = "";
   };
 }
-
+angular
+  .module("mealViewer")
+  .controller("ImageVideoController", ImageVideoController);
 angular.module("mealViewer").component("imageVideo", {
   templateUrl: "./components/imageVideo/imageVideo.tpl.html",
-  controller: ImageVideoController,
+  controller: "ImageVideoController",
   bindings: {
-    imageSrc: "<",
-    videoSrc: "<"
+    imageSrc: "=",
+    videoSrc: "="
   }
 });

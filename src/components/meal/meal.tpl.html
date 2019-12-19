@@ -1,24 +1,28 @@
-<section id="body" class="panel panel--align panel--margin">
+<section
+  id="body"
+  class="panel panel--align panel--margin"
+  ng-controller="MealController as ctrl"
+>
   <image-video
-    imageSrc="{{meal.strMealThumb}}"
-    videoSrc="{{meal.strYoutube}}"
+    image-src="ctrl.meal.strMealThumb"
+    video-src="ctrl.meal.strYoutube"
   ></image-video>
   <div class="panel__right">
     <h3 class="title--font h3--size text--margin0 title--color">
-      {{meal.strMeal}}
+      {{ctrl.meal.strMeal}}
     </h3>
     <p class="text--font text--size text--margin0">
-      <b>Category:</b> {{meal.strCategory}}
+      <b>Category:</b> {{ctrl.meal.strCategory}}
     </p>
     <p class="text--font text--size text--margin0">
-      <b>Tags:</b> {{meal.strTags}}
+      <b>Tags:</b> {{ctrl.meal.strTags}}
     </p>
     <p class="text--font text--size">
-      {{meal.strInstructions}}
+      {{ctrl.meal.strInstructions}}
     </p>
     <h4 class="title--font text--size text--margin0">Ingredients:</h4>
     <ul class="ul text--font text--size text--margin0">
-      <li ng-repeat="ingredient in ingredients">
+      <li ng-repeat="ingredient in ctrl.ingredients">
         <b>{{ingredient.name}}</b> -
         <em>{{ingredient.measurement}}</em>
       </li>
