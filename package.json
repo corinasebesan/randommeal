@@ -30,11 +30,12 @@
     "eslint-plugin-import": "^2.18.2",
     "html-loader": "^0.5.5",
     "style-loader": "^1.0.0",
-    "typescript": "^3.7.2",
+    "typescript": "^3.7.3",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
+    "@types/angular": "^1.6.57",
     "awesome-typescript-loader": "^5.2.1",
     "lit-html": "^1.1.2",
     "mustache": "^3.1.0",

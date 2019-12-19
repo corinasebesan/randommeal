@@ -1,7 +1,7 @@
 (function() {
   var app = angular.module("mealViewer");
 
-  var MealController = function(mealService, $routeParams) {
+  var MealController = function(mealService, $routeParams, $sce) {
     var ctrl = this;
     ctrl.$onInit = function() {
       ctrl.mealName = $routeParams.mealName;
@@ -14,14 +14,13 @@
     var mealDataProcessing = function(data) {
       ctrl.meal = data;
 
-      /**
-       * Embeddes the video link
-       */
-      ctrl.meal.strYoutube = ctrl.meal.strYoutube.replace("watch?v=", "embed/");
+      // Embeddes the video link
+      ctrl.meal.strYoutube = $sce.trustAsResourceUrl(
+        ctrl.meal.strYoutube.replace("watch?v=", "embed/")
+      );
+      ctrl.meal.strMealThumb = $sce.trustAsResourceUrl(ctrl.meal.strMealThumb);
 
-      /**
-       * It maps an array with all the names of the ingredients
-       */
+      // It maps an array with all the names of the ingredients
       var names = Object.keys(ctrl.meal)
         .filter(function(k) {
           return k.indexOf("strIngredient") > -1;
@@ -33,9 +32,7 @@
           return k && k !== "";
         });
 
-      /**
-       * It maps an array with all the measurements of the ingredients
-       */
+      // It maps an array with all the measurements of the ingredients
       var measurements = Object.keys(ctrl.meal)
         .filter(function(k) {
           return k.indexOf("strMeasure") > -1;
@@ -47,10 +44,7 @@
           return k && k !== "";
         });
 
-      /**
-       * It creates an array of objects that are formed of the ingredient name and its associated measurement
-       */
-
+      // It creates an array of objects that are formed of the ingredient name and its associated measurement
       ctrl.ingredients = new Array(names.length);
       for (var i = 0; i < ctrl.ingredients.length; i++) {
         ctrl.ingredients[i] = {
