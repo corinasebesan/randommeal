@@ -14,7 +14,7 @@
     /**
      * It calls the api to get a searched meal
      */
-    var getSearchedMeal = function(mealName) {
+    var getSearchedMeal = function(mealName: String) {
       return $http
         .get("https://www.themealdb.com/api/json/v1/1/search.php?s=" + mealName)
         .then(function(response) {

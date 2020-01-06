@@ -1,6 +1,4 @@
-(function() {
-  var app = angular.module("mealViewer");
-
+module app.meal {
   var MealController = function(mealService, $routeParams, $sce) {
     var ctrl = this;
     ctrl.$onInit = function() {
@@ -11,7 +9,7 @@
      * It does the preprocessing of the received meal data
      * @param data The meal data
      */
-    var mealDataProcessing = function(data) {
+    var mealDataProcessing = function(data: object) {
       ctrl.meal = data;
 
       // Embeddes the video link
@@ -54,5 +52,5 @@
       }
     };
   };
-  app.controller("MealController", MealController);
-})();
+  angular.module("mealViewer").controller("MealController", MealController);
+}
