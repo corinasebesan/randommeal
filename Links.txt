@@ -1,0 +1,18 @@
+-Javascript:
+https://scrimba.com/g/gintrotojavascript
+https://scrimba.com/g/gintrotoes6
+-CSS:
+https://scrimba.com/g/gintrotocss
+-Map array:
+https://www.robinwieruch.de/javascript-map-array
+-Layout & media queries:
+https://learnlayout.com/
+-Flexbox:
+https://flexboxfroggy.com/
+https://www.freecodecamp.org/news/learn-css-flexbox-in-5-minutes-b941f0affc34/
+-Modules:
+https://medium.com/backticks-tildes/introduction-to-es6-modules-49956f580da
+-BEM:
+https://css-tricks.com/bem-101/
+-Babel:
+https://medium.com/backticks-tildes/introduction-to-babel-and-javascript-bundlers-fe6165de197c

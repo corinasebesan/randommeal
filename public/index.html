@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mealViewer">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Meal Generator</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald|PT+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"
+    ></script>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.min.js"
+    ></script>
+    <!--
+      One script. The stylesheets, the templates, the service and the
+      controllers are all compiled into it. This page used to load the
+      TypeScript sources directly, which no browser can execute.
+    -->
+    <script src="bundle.js"></script>
+  </head>
+  <body class="body body--color">
+    <app-header></app-header>
+    <div ng-view></div>
+  </body>
+</html>

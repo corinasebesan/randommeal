@@ -1,10 +1,13 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./src/javascript/api/index.js",
+  // The entry used to point at ./src/javascript/api/index.js, a path that has
+  // never existed in this repository, so the build failed before it started.
+  entry: "./src/app.ts",
   output: {
     path: path.resolve(__dirname, "public"),
-    filename: "bundle.js"
+    filename: "bundle.js",
+    clean: false
   },
   module: {
     rules: [
@@ -18,13 +21,15 @@ module.exports = {
         use: ["style-loader", "css-loader"]
       },
       {
+        // Angular templates are compiled into the bundle rather than fetched at
+        // runtime, so the built page is one HTML file and one script.
         test: /\.html$/,
         use: ["html-loader"]
       }
     ]
   },
   resolve: {
-    extensions: [".js", ".ts"]
+    extensions: [".ts", ".js"]
   },
   stats: {
     colors: true,

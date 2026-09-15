@@ -1,8 +1,12 @@
 {
   "compilerOptions": {
-    "outDir": "./public",
+    "target": "es6",
+    "module": "esnext",
+    "moduleResolution": "node",
     "allowJs": true,
-    "target": "es6"
+    "noEmit": true,
+    "strict": false,
+    "types": ["angular"]
   },
-  "include": ["./src/**/*", "html.d.ts", "src/services"]
+  "include": ["src/**/*", "html.d.ts"]
 }
